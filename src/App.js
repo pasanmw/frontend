@@ -1,18 +1,25 @@
-//import logo from './logo.svg';
-//import './App.css';
+
 import React from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
+  BrowserRouter ,
+  Routes,
   Route,
-  Link
+  
 } from "react-router-dom";
 
+import Signin from "./containers/signin";
+import Signup from "./containers/signup";
+import Home from "./containers/dashboard";
 function App() {
   return (
-    <div className="App">
 
-    </div>
+    <BrowserRouter>
+       <Routes>
+    <Route path="/" element={<Signin/>} />
+     <Route path="/signup" element={<Signup />} />
+     <Route path="/home" element={<Home />} />
+     </Routes>
+      </BrowserRouter>
   );
 }
 
